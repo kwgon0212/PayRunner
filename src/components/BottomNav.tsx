@@ -13,7 +13,6 @@ interface NavBtnProps {
 }
 const NavBtn: React.FC<NavBtnProps> = ({ to, icon: Icon, label }) => {
   const color = window.location.pathname === to ? "#0B798B" : "#717171";
-  console.log(window.location.pathname);
 
   return (
     <Link to={to} className="flex flex-col items-center gap-1">
