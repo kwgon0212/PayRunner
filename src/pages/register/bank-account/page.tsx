@@ -4,7 +4,7 @@ import { useAppDispatch } from "@/hooks/useRedux";
 import { setUserBankAccount } from "@/util/slices/registerUserInfoSlice";
 import { useNavigate } from "react-router-dom";
 import SubmitButton from "@/components/SubmitButton";
-import RegHeader from "@/components/RegHeader";
+import HeaderReg from "@/components/HeaderReg";
 import BankAccountInput from "@/components/BankAccountInput";
 
 const RegisterBankAccount = () => {
@@ -23,7 +23,7 @@ const RegisterBankAccount = () => {
 
   return (
     <>
-      <RegHeader percent={62.5} />
+      <HeaderReg percent={62.5} />
       <Main hasBottomNav={false}>
         <div className="size-full p-layout flex flex-col gap-layout relative bg-white">
           <p className="text-xl font-bold">계좌 등록</p>

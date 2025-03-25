@@ -1,5 +1,5 @@
 import Main from "@/components/Main";
-import RegHeader from "@/components/RegHeader";
+import HeaderReg from "@/components/HeaderReg";
 import { useAppDispatch } from "@/hooks/useRedux";
 // import { setUserBisnessNumber } from "@/util/slices/registerUserInfoSlice";
 import React, { useState } from "react";
@@ -41,7 +41,7 @@ function RegisterBusinessPage() {
 
   return (
     <>
-      <RegHeader percent={75} />
+      <HeaderReg percent={75} />
       <Main hasBottomNav={false}>
         <div className="flex flex-col gap-4 p-5">
           <p className="font-semibold text-xl">사업자번호</p>

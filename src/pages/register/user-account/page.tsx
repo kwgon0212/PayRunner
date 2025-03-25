@@ -1,6 +1,6 @@
 import InputComponent from "@/components/Input";
 import Main from "@/components/Main";
-import RegHeader from "@/components/RegHeader";
+import HeaderReg from "@/components/HeaderReg";
 import SubmitButton from "@/components/SubmitButton";
 import { useAppDispatch, useAppSelector } from "@/hooks/useRedux";
 import { setUserPassword } from "@/util/slices/registerUserInfoSlice";
@@ -26,7 +26,7 @@ const RegisterBankAccount = () => {
 
   return (
     <>
-      <RegHeader percent={87.5} />
+      <HeaderReg percent={87.5} />
       <Main hasBottomNav={false}>
         <div className="size-full p-layout flex flex-col gap-layout relative bg-white">
           <p className="text-xl font-bold">계정 등록</p>

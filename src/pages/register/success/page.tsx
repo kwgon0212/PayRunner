@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import JSConfetti from "js-confetti";
 import axios from "axios";
 import SubmitButton from "@/components/SubmitButton";
-import RegHeader from "@/components/RegHeader";
+import HeaderReg from "@/components/HeaderReg";
 
 function RegisterSuccessPage() {
   const registerUserInfo = useAppSelector((state) => state.registerUserInfo);
@@ -82,7 +82,7 @@ function RegisterSuccessPage() {
   };
   return (
     <>
-      <RegHeader percent={100} />
+      <HeaderReg percent={100} />
       <Main hasBottomNav={false}>
         <div
           className="size-full p-layout flex flex-col gap-layout bg-white"

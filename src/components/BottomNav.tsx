@@ -1,4 +1,4 @@
-import React, { JSX, useMemo } from "react";
+import React, { useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import HomeIcon from "./icons/bottomNav/Home";
 import EmployIcon from "./icons/bottomNav/Employ";
@@ -6,6 +6,24 @@ import UserIcon from "./icons/bottomNav/User";
 import WorkIcon from "./icons/bottomNav/Work";
 import ChatIcon from "./icons/bottomNav/Chat";
 
+interface NavBtnProps {
+  to: string;
+  icon: React.ElementType;
+  label: string;
+}
+const NavBtn: React.FC<NavBtnProps> = ({ to, icon: Icon, label }) => {
+  const color = window.location.pathname === to ? "#0B798B" : "#717171";
+  console.log(window.location.pathname);
+
+  return (
+    <Link to={to} className="flex flex-col items-center gap-1">
+      <Icon width={24} height={24} color={color} />
+      <span className="text-[12px]" style={{ color }}>
+        {label}
+      </span>
+    </Link>
+  );
+};
 const BottomNav = () => {
   const startPathname = useLocation().pathname.split("/").splice(1);
 
@@ -24,38 +42,13 @@ const BottomNav = () => {
   );
 
   return (
-    <nav className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[560px] h-[80px] border-t-1 border-main-bg bg-white pt-[10px] px-[20px] z-10">
+    <nav className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[560px] h-20 border-t-1 border-main-bg bg-white pt-[10px] px-5 z-10">
       <div className="flex gap-[10px] justify-around items-center">
-        <Link to={"/"} className="flex flex-col items-center gap-[4px]">
-          <HomeIcon width={24} height={24} color={colors.home} />
-          <span className="text-[12px]" style={{ color: colors.home }}>
-            홈
-          </span>
-        </Link>
-        <Link to={"/recruit"} className="flex flex-col items-center gap-[4px]">
-          <EmployIcon width={24} height={24} color={colors.recruit} />
-          <span className="text-[12px]" style={{ color: colors.recruit }}>
-            고용현황
-          </span>
-        </Link>
-        <Link to={"/chat"} className="flex flex-col items-center gap-[4px]">
-          <ChatIcon width={24} height={24} color={colors.chat} />
-          <span className="text-[12px]" style={{ color: colors.chat }}>
-            채팅
-          </span>
-        </Link>
-        <Link to={"/work"} className="flex flex-col items-center gap-[4px]">
-          <WorkIcon width={24} height={24} color={colors.work} />
-          <span className="text-[12px]" style={{ color: colors.work }}>
-            근무현황
-          </span>
-        </Link>
-        <Link to={"/mypage"} className="flex flex-col items-center gap-[4px]">
-          <UserIcon width={24} height={24} color={colors.mypage} />
-          <span className="text-[12px]" style={{ color: colors.mypage }}>
-            내 정보
-          </span>
-        </Link>
+        <NavBtn to="/" icon={HomeIcon} label="홈" />
+        <NavBtn to="/recruit" icon={EmployIcon} label="고용현황" />
+        <NavBtn to="/chat" icon={ChatIcon} label="채팅" />
+        <NavBtn to="/work" icon={WorkIcon} label="근무현황" />
+        <NavBtn to="/mypage" icon={UserIcon} label="내 정보" />
       </div>
     </nav>
   );

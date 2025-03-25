@@ -1,5 +1,5 @@
-import React, { JSX } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { JSX } from "react";
+import { motion } from "framer-motion";
 
 type Props = {
   children: JSX.Element;
@@ -8,7 +8,6 @@ type Props = {
 
 const Main = ({ children, hasBottomNav }: Props) => {
   return (
-    // <AnimatePresence mode="wait">
     <motion.main
       initial={{ x: 200, opacity: 1 }}
       animate={{ x: 0, opacity: 1 }}
@@ -19,7 +18,6 @@ const Main = ({ children, hasBottomNav }: Props) => {
     >
       {children}
     </motion.main>
-    // </AnimatePresence>
   );
 };
 

@@ -5,7 +5,7 @@ import Main from "@/components/Main";
 import { useAppDispatch } from "@/hooks/useRedux";
 import { setUserAddress } from "@/util/slices/registerUserInfoSlice";
 import SubmitButton from "@/components/SubmitButton";
-import RegHeader from "@/components/RegHeader";
+import HeaderReg from "@/components/HeaderReg";
 import AddressInput from "@/components/AddressInput";
 
 const Head = styled.div`
@@ -36,7 +36,7 @@ export function RegisterAddressPage() {
 
   return (
     <>
-      <RegHeader percent={25} />
+      <HeaderReg percent={25} />
       <Main hasBottomNav={false}>
         <div className="flex flex-col gap-[20px] items-center size-full bg-white p-[20px]">
           <Head className="text-xl">주소지 등록</Head>

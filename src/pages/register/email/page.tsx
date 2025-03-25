@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import InputComponent from "@/components/Input";
 import Main from "@/components/Main";
 import Modal from "@/components/Modal";
-import RegHeader from "@/components/RegHeader";
+import HeaderReg from "@/components/HeaderReg";
 import SubmitButton from "@/components/SubmitButton";
 import { useAppDispatch } from "@/hooks/useRedux";
 import {
@@ -36,7 +36,7 @@ function RegisterEmailPage() {
 
   return (
     <>
-      <RegHeader percent={37.5} />
+      <HeaderReg percent={37.5} />
       <Main hasBottomNav={false}>
         <div className="size-full bg-white">
           <form

@@ -7,7 +7,7 @@ import SignatureCanvas from "react-signature-canvas";
 import { useAppDispatch } from "@/hooks/useRedux";
 import { setUserSignature } from "@/util/slices/registerUserInfoSlice";
 import SubmitButton from "@/components/SubmitButton";
-import RegHeader from "@/components/RegHeader";
+import HeaderReg from "@/components/HeaderReg";
 
 const Head = styled.span`
   font-weight: bold;
@@ -61,7 +61,7 @@ export const RegisterSignPage = () => {
 
   return (
     <>
-      <RegHeader percent={50} />
+      <HeaderReg percent={50} />
       <Main hasBottomNav={false}>
         <div className="size-full bg-white p-layout flex flex-col gap-layout items-center">
           <Head className="text-xl text-left w-full">서명 등록</Head>

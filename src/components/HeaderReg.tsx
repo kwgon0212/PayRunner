@@ -3,8 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import ArrowLeftIcon from "./icons/ArrowLeft";
 import CancelIcon from "./icons/Cancel";
 
-// const RegHeader = ({ percent }: { percent: number }) => {
-const RegHeader = ({ percent }: { percent: number }) => {
+const HeaderReg = ({ percent }: { percent: number }) => {
   const navigate = useNavigate();
   return (
     <Header>
@@ -28,4 +27,4 @@ const RegHeader = ({ percent }: { percent: number }) => {
   );
 };
 
-export default RegHeader;
+export default HeaderReg;

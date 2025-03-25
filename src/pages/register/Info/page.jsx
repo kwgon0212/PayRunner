@@ -12,7 +12,7 @@ import {
 } from "@/util/slices/registerUserInfoSlice";
 import InputComponent from "@/components/Input";
 import SubmitButton from "@/components/SubmitButton";
-import RegHeader from "@/components/RegHeader";
+import HeaderReg from "@/components/HeaderReg";
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -125,7 +125,7 @@ function RegisterInfoPage() {
 
   return (
     <>
-      <RegHeader percent={12.5} />
+      <HeaderReg percent={12.5} />
       <Main hasBottomNav={false}>
         <>
           <MainContainer>
